@@ -1,0 +1,169 @@
+/* CSS Document */
+
+body {
+	color: #FFFF99;
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	page-break-before: auto;
+	page-break-after: auto;
+}
+#footer {
+	background-color:#FFFFCC;
+	color:#6699FF;
+	clear:both;
+	text-align:center;
+	padding:5px;
+	position: static;
+	bottom: 0;
+	width:100%;
+	background-attachment: fixed;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#333333;
+}
+li {
+    float: left;
+	
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+div#content div#page {
+    min-height: 400px;
+}
+
+div#content {
+    text-align: left;
+}
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+}
+$small_padding: 8px
+$large_padding: 16px
+$main_fg_color : #333
+$main_theme_color : #8e1818
+
+$navigation_bg_color : #550000
+$page_link_fg_color  : #4183C4
+$footer_bg_color     : #EEE
+$footer_fg_color     : #666
+
+/* Druge boje */
+
+$navigation_bg_highlight      : #686464
+$navigation_menu_bg_color     : #303030
+$navigation_menu_bg_highlight : $navigation_bg_highlight
+$page_link_fg_highlight       : darken($page_link_fg_color, 10%)
+
+@import "color-settings"
+@import "size-settings"
+
+div#content
+    max-width: 800px
+
+   
+
+    div#navigation
+        h2.navigation_title
+            display: none
+
+        ul.navigation_list
+            margin: 0
+            padding: 0
+            margin-top: $small_padding
+            list-style-type: none
+
+            li
+                float: left
+                margin-right: 2 * $small_padding
+                margin-left: - $small_padding
+                padding: 0 $small_padding
+
+                a
+                    text-decoration: none
+                    color: $main_fg_color
+                    padding-bottom: $small_padding / 2
+                    font-size: 1.1em
+
+                    &.navigation_section_title
+                        background-image: url(../images/navigation-arrow-down.png)
+                        background-position: bottom
+                        background-repeat: no-repeat
+
+                    &:HOVER, &.navigation_section_title_active
+                        border-bottom: 4px solid $navigation_bg_highlight
+                        color: $main_theme_color
+                        background: none
+
+            ul.navigation_section_items
+                list-style-type: none
+                position: absolute
+                background-color: $navigation_menu_bg_color !important
+                color: black
+                padding: .5em 0
+                margin: 0
+                margin-top: 7px
+                visibility: hidden
+                opacity: 0
+
+                li
+                    float: none
+                    display: block
+                    margin: 0
+                    padding: 0
+
+                    a
+                        padding: 0 $large_padding
+                        font-size: 1.0em !important
+                        display: block
+                        color: white
+                        border: none
+                        &:HOVER
+                            background-color: $navigation_menu_bg_highlight !important
+                            color: white
+
+            li#navigation_section__language
+                position: absolute
+                right: 0
+
+                ul#navigation_section_items__language
+                    position: absolute
+                    width: 250px
+                    right: 0
+
+                    text-align: right
+
+    div#page
+        div.image-full-width
+            text-align: center
+
+            p
+                text-align: center
+
+            img
+                max-width: 80%
+
+        div.image-columns-2
+            div.image-columns-inner
+                width: 550px
+                display: block
+                margin: auto
+
+            text-align: center
+
+            p
+                text-align: center
+
+
+
